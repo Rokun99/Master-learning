@@ -1,5 +1,4 @@
 
-
 export const de = {
     "app.title": "Master Lernen",
     "app.subtitle": "30 Tage Programm",

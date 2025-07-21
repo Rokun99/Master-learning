@@ -1,5 +1,4 @@
 
-
 export const en = {
     "app.title": "Master Learning",
     "app.subtitle": "30-Day Program",

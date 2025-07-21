@@ -1,0 +1,41 @@
+:root{
+  --font-sans:'Inter var','Inter',system-ui,sans-serif;
+  --font-serif:'Lora',serif;
+  --step--2:clamp(.78rem,.77rem + .03vw,.8rem);
+  --step--1:clamp(.88rem,.86rem + .09vw,.9rem);
+  --step-0:clamp(1rem,1rem + 0vw,1rem);
+  --step-1:clamp(1.13rem,1.11rem + .1vw,1.2rem);
+  --step-2:clamp(1.27rem,1.24rem + .15vw,1.44rem);
+  --step-3:clamp(1.42rem,1.38rem + .2vw,1.73rem);
+  --step-4:clamp(1.6rem,1.54rem + .28vw,2.07rem);
+  --step-5:clamp(1.8rem,1.72rem + .4vw,2.49rem);
+
+  --space-3xs:.25rem;--space-2xs:.5rem;--space-xs:.75rem;--space-sm:1rem;--space-md:1.5rem;--space-lg:2rem;--space-xl:3rem;
+
+  --radius-sm:.5rem;--radius-md:.75rem;--radius-lg:1rem;--radius-full:9999px;
+
+  --shadow-sm:0 1px 3px rgba(0,0,0,.1),0 1px 2px rgba(0,0,0,.06);
+  --shadow-md:0 4px 6px rgba(0,0,0,.07),0 2px 4px rgba(0,0,0,.06);
+  --shadow-xl:0 20px 25px -5px rgba(0,0,0,.1),0 10px 10px -5px rgba(0,0,0,.04);
+
+  --ease-out:cubic-bezier(.22,1,.36,1);
+  --ease-spring:cubic-bezier(.34,1.56,.64,1);
+
+  --z-header:1000;--z-sidebar:1010;--z-modal:1020;
+
+  /* colors P3-ready */
+  --bg:light-dark(#f8fafc,#020617);
+  --sidebar-bg:light-dark(#fff,#0f172a);
+  --surface:light-dark(#fff,#111827);
+  --text:light-dark(#020617,#f1f5f9);
+  --text-muted:light-dark(#475569,#94a3b8);
+  --primary:light-dark(#1e3a8a,#60a5fa);
+  --secondary:light-dark(#2563eb,#3b82f6);
+  --accent:light-dark(#f97316,#fb923c);
+  --link:light-dark(#2563eb,#3b82f6);
+  --link-hover:light-dark(#1d4ed8,#60a5fa);
+  --border:light-dark(#e2e8f0,#334155);
+  --success:#16a34a;
+  --focus:var(--accent);
+  --header-text:#fff;
+}

@@ -21,7 +21,7 @@ const TranslationContext = createContext<TranslationContextType>({
 export const useTranslation = () => useContext(TranslationContext);
 
 const getNestedValue = (obj: any, key: string): string | undefined => {
-    return obj?.[key];
+    return key.split('.').reduce((acc, part) => acc && acc[part], obj);
 };
 
 export const TranslationProvider: FC<{ children: ReactNode }> = ({ children }) => {

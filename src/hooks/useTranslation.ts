@@ -21,9 +21,6 @@ const TranslationContext = createContext<TranslationContextType>({
 export const useTranslation = () => useContext(TranslationContext);
 
 const getNestedValue = (obj: any, key: string): string | undefined => {
-    // This is a simplified getter that assumes a flat structure based on your JSON.
-    // For deeply nested keys like 'course.1.title', you'd need a more complex recursive function.
-    // However, your current locales seem to be flat with dot-notation keys.
     return obj?.[key];
 };
 

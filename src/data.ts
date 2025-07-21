@@ -20,7 +20,7 @@ export const courseData: DayData[] = Array.from({ length: 30 }, (_, i) => {
     const day = i + 1;
     let specialFeature: 'feedback' | 'visualize' | undefined = undefined;
     if (day === 7) specialFeature = 'feedback';
-    if (day === 17) specialFeature = 'visualize';
+    if (day === 29) specialFeature = 'visualize';
 
     return {
         id: day,

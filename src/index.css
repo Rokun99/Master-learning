@@ -6,31 +6,30 @@
 }
 
 :root {
-    --bg-color: #f1f5f9; /* Light Gray Blue */
+    --bg-color: #f8fafc; /* Slate 50 */
     --sidebar-bg: #ffffff;
     --content-bg: #ffffff;
-    --primary-color: #1e3a8a; /* Deep Blue */
-    --secondary-color: #2563eb; /* Lighter Blue */
-    --accent-color: #f97316; /* Vibrant Orange */
-    --text-color: #0f172a; /* Very Dark Slate */
-    --light-text-color: #475569; /* Lighter Slate */
-    --border-color: #cbd5e1;
+    --primary-color: #1e3a8a; /* Deep Blue 800 */
+    --secondary-color: #2563eb; /* Blue 600 */
+    --accent-color: #f97316; /* Orange 500 */
+    --text-color: #020617; /* Slate 950 */
+    --light-text-color: #475569; /* Slate 600 */
+    --border-color: #e2e8f0; /* Slate 200 */
     --header-text-color: #ffffff;
     --button-disabled-opacity: 0.5;
-    --completed-check-color: #16a34a; /* Green for success */
-    --input-bg-color: #f8fafc;
-    --ai-message-bg: #e0e7ff;
-    --user-message-bg: #dbeafe;
-    --feedback-card-bg: #fff7ed;
+    --completed-check-color: #16a34a; /* Green 600 */
+    --input-bg-color: #fdfdfe;
+    --ai-message-bg: #e0e7ff; /* Indigo 100 */
+    --user-message-bg: #dbeafe; /* Blue 100 */
+    --feedback-card-bg: #fff7ed; /* Orange 50 */
     --skeleton-bg: #e2e8f0;
-    --streak-color: #f59e0b;
-    --example-bg-color: #fffbeb; /* Light Amber */
-    --example-border-color: #fde68a; /* Darker Amber */
+    --streak-color: #f59e0b; /* Amber 500 */
+    --example-bg-color: #f0f9ff; /* Sky 50 */
+    --example-border-color: #bae6fd; /* Sky 200 */
 
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --font-family-heading: 'Lora', 'Georgia', serif;
 
-    /* Visual Tokens */
     --radius-xs:   4px;
     --radius-sm:   8px;
     --radius-md:  12px;
@@ -59,9 +58,10 @@
     --user-message-bg: #1e40af; /* Blue 800 */
     --feedback-card-bg: #431407; /* Orange 950 */
     --skeleton-bg: #334155;
-    --example-bg-color: #451a03; /* Amber 950 */
-    --example-border-color: #78350f; /* Amber 800 */
+    --example-bg-color: #0c4a6e; /* Sky 900 */
+    --example-border-color: #0369a1; /* Sky 700 */
 }
+
 
 html {
     color-scheme: light dark;
@@ -95,7 +95,7 @@ h4 { font-size: 1.1rem; }
 
 p, li, span { color: var(--text-color); }
 em { color: var(--light-text-color); font-style: italic; }
-strong { font-weight: 600; }
+strong { font-weight: 600; color: var(--accent-color); }
 a { color: var(--secondary-color); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
@@ -107,9 +107,8 @@ blockquote {
     background-color: var(--example-bg-color);
     border-left: 4px solid var(--example-border-color);
     border-radius: var(--radius-sm);
-    font-style: italic;
-    color: var(--light-text-color);
 }
+blockquote p { font-style: italic; color: var(--light-text-color); margin-bottom: 0;}
 blockquote::before {
     content: '💡';
     position: absolute;
@@ -128,7 +127,7 @@ button {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: background-color 0.2s, transform 0.1s;
+    transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
 }
 button:active {
     transform: scale(0.97);
@@ -143,14 +142,7 @@ button:disabled {
 }
 .button-primary:hover:not(:disabled) {
     background-color: var(--primary-color);
-}
-.button-secondary {
-    background-color: transparent;
-    border: 1px solid var(--border-color);
-    color: var(--text-color);
-}
-.button-secondary:hover:not(:disabled) {
-    background-color: var(--bg-color);
+    box-shadow: var(--shadow-sm);
 }
 
 /* App Layout */
@@ -187,9 +179,6 @@ button:disabled {
     z-index: 1000;
     transition: box-shadow 0.2s;
 }
-.main-header.scrolled {
-    box-shadow: var(--shadow-md);
-}
 .header-content h1 {
     font-size: 1.5rem;
     color: var(--header-text-color);
@@ -220,6 +209,7 @@ button:disabled {
 
 /* Sidebar */
 .sidebar {
+    position: relative;
     width: 320px;
     background-color: var(--sidebar-bg);
     border-right: 1px solid var(--border-color);
@@ -269,12 +259,7 @@ button:disabled {
     color: white;
 }
 .day-button.active {
-    background-color: var(--primary-color);
-    color: var(--header-text-color);
-}
-.day-button.active .day-number {
-    border-color: var(--header-text-color);
-    color: var(--header-text-color);
+    background-color: var(--bg-color);
 }
 .day-button.active::before {
     content: '';
@@ -282,7 +267,7 @@ button:disabled {
     left: -1rem;
     top: 0;
     bottom: 0;
-    width: 5px;
+    width: 6px;
     background-color: var(--accent-color);
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
@@ -298,19 +283,25 @@ button:disabled {
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(249, 115, 22, 0); }
-  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(249, 115, 22, 0); }
+  0% { box-shadow: 0 0 0 0 var(--accent-color); }
+  70% { box-shadow: 0 0 0 8px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
 }
-.day-button.today .day-number {
-    border-color: var(--accent-color);
-    color: var(--accent-color);
+.day-button.today .day-number::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    top: -3px;
+    right: -3px;
     animation: pulse 2s infinite;
 }
 
 /* Sidebar toggle */
 .sidebar-toggle {
-    display: none; /* Hidden by default, shown on tablet/desktop */
+    display: none; /* Hidden by default */
     position: absolute;
     top: 1rem;
     right: -12px;
@@ -453,11 +444,14 @@ button:disabled {
 .modal-overlay {
     position: fixed;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(15, 23, 42, 0.6);
     display: grid;
     place-items: center;
     z-index: 2000;
     animation: fadeIn 0.3s ease;
+}
+[data-theme="dark"] .modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 .modal-content {
     background-color: var(--content-bg);
@@ -484,13 +478,21 @@ button:disabled {
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes slideInUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
+/* Onboarding Modal */
+.onboarding-steps-container {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    width: 100%;
+}
+.onboarding-step {
+    flex: 0 0 100%;
+    width: 100%;
+    text-align: center;
+}
+
 /* Responsive Design */
 .mobile-view { display: block; }
 .desktop-view-grid { display: none; }
-
-@media (min-width: 768px) {
-    .main-content { padding: 2rem; }
-}
 
 @media (min-width: 1024px) {
     .mobile-view { display: none; }
@@ -522,3 +524,74 @@ button:disabled {
     }
      .sidebar.sidebar--collapsed .day-number { margin-right: 0; }
 }
+/* Achievements Modal */
+.stat-card {
+    background-color: var(--bg-color);
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+.stats-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+.badge-grid {
+    display: grid;
+    gap: 1rem;
+}
+.badge-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    background-color: var(--bg-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.badge-item.unlocked:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+.badge-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+}
+.badge-item.locked .badge-icon {
+    background-color: var(--border-color);
+    color: var(--light-text-color);
+    opacity: 0.6;
+}
+.badge-item.unlocked .badge-icon {
+    background-color: var(--accent-color);
+    color: white;
+}
+.badge-item h4 { margin: 0 0 0.25rem; }
+.badge-item p { font-size: 0.9rem; color: var(--light-text-color); margin: 0; }
+.badge-item.locked h4, .badge-item.locked p {
+    color: var(--light-text-color);
+}
+@keyframes shine {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+.badge-item.unlocked:hover .badge-icon {
+    background: linear-gradient(100deg, var(--accent-color) 40%, #ffc107 50%, var(--accent-color) 60%);
+    background-size: 200% 100%;
+    animation: shine 2s linear infinite;
+}
+
+/* Idea Generator Modal */
+.idea-card {
+    background-color: var(--bg-color);
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 1rem;
+}
+.idea-card h4 { color: var(--accent-color); }
+.idea-card-list { max-height: 40vh; overflow-y: auto; margin-top: 1rem; }

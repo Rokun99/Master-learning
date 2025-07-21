@@ -1,8 +1,6 @@
-
 import { GoogleGenAI, Type, Content } from "@google/genai";
-import { JournalEntry, DnaReportData, Feedback } from "../storage";
+import { DnaReportData, Feedback } from "../storage";
 
-// The vite.config.ts file defines process.env.API_KEY from VITE_GEMINI_API_KEY.
 const apiKey = process.env.API_KEY;
 if (!apiKey) {
     throw new Error("VITE_GEMINI_API_KEY is not defined. Please check your environment variables.");
@@ -15,12 +13,6 @@ interface Idea {
     description: string;
 }
 
-/**
- * Gets a chat response from the AI.
- * @param history The chat history.
- * @param systemInstruction The system instruction for the AI.
- * @returns The AI's response text.
- */
 export async function getAiChatResponse(history: Content[], systemInstruction: string): Promise<string> {
     try {
         const response = await ai.models.generateContent({
@@ -37,11 +29,6 @@ export async function getAiChatResponse(history: Content[], systemInstruction: s
     }
 }
 
-/**
- * Generates creative ideas based on a prompt.
- * @param prompt The prompt to generate ideas for.
- * @returns A list of ideas with titles and descriptions.
- */
 export async function generateIdeas(prompt: string): Promise<Idea[]> {
     try {
         const response = await ai.models.generateContent({
@@ -60,7 +47,7 @@ export async function generateIdeas(prompt: string): Promise<Idea[]> {
                             },
                             description: {
                                 type: Type.STRING,
-                                description: 'A brief description of the creative idea.',
+                                description: 'A brief description of the actionable step.',
                             },
                         },
                         required: ['title', 'description'],
@@ -77,11 +64,6 @@ export async function generateIdeas(prompt: string): Promise<Idea[]> {
     }
 }
 
-/**
- * Gets structured feedback on a conversation.
- * @param prompt The combined prompt including context and system instruction.
- * @returns Structured feedback.
- */
 export async function getStructuredFeedback(prompt: string): Promise<Feedback> {
     try {
         const response = await ai.models.generateContent({
@@ -109,11 +91,6 @@ export async function getStructuredFeedback(prompt: string): Promise<Feedback> {
     }
 }
 
-/**
- * Generates an image for a prompt.
- * @param prompt The combined prompt for the image.
- * @returns A base64 encoded image string.
- */
 export async function generateImageForPrompt(prompt: string): Promise<string> {
     try {
         const response = await ai.models.generateImages({
@@ -139,11 +116,6 @@ export async function generateImageForPrompt(prompt: string): Promise<string> {
     }
 }
 
-/**
- * Generates a Creative DNA report from a text prompt.
- * @param prompt The combined prompt including all journal entries and system instructions.
- * @returns The structured DNA report data.
- */
 export async function generateDnaReport(prompt: string): Promise<Omit<DnaReportData, 'generatedAt'>> {
     try {
         const response = await ai.models.generateContent({

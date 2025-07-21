@@ -1,3 +1,4 @@
+
 import { GoogleGenAI, Type, Content } from "@google/genai";
 import { DnaReportData, Feedback } from "../storage";
 
@@ -29,12 +30,13 @@ export async function getAiChatResponse(history: Content[], systemInstruction: s
     }
 }
 
-export async function generateIdeas(prompt: string): Promise<Idea[]> {
+export async function generateIdeas(userPrompt: string, systemInstruction: string): Promise<Idea[]> {
     try {
         const response = await ai.models.generateContent({
             model: 'gemini-2.5-flash',
-            contents: prompt,
+            contents: userPrompt,
             config: {
+                systemInstruction,
                 responseMimeType: "application/json",
                 responseSchema: {
                     type: Type.ARRAY,

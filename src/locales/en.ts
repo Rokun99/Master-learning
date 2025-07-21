@@ -1,4 +1,5 @@
 
+
 export const en = {
     "app.title": "Master Learning",
     "app.subtitle": "30-Day Program",
@@ -71,7 +72,7 @@ export const en = {
     "ideaGenerator.modal.button.loading": "Analyzing...",
     "ideaGenerator.modal.error.generic": "An error occurred. Please try again later.",
     "ideaGenerator.modal.close": "Close",
-    "ideaGenerator.modal.systemPrompt": "You are a pragmatic learning strategist. A user has the following problem: '{{prompt}}'. Generate 3-5 concrete, small, and immediately actionable next steps the user can take to address this learning challenge. For each step, provide a short title and an encouraging explanation.",
+    "ideaGenerator.modal.systemPrompt": "You are a pragmatic learning strategist. Generate 3-5 concrete, small, and immediately actionable next steps for the user's learning challenge. For each step, provide a short title and an encouraging explanation.",
 
     "achievements.modal.title": "Your Learning Journey",
     "achievements.stats.daysCompleted": "Days Completed",
@@ -80,14 +81,14 @@ export const en = {
     "achievements.dnaReport.description": "You've completed the program! Analyze your entries with AI to discover your personal Learning DNA.",
     "achievements.dnaReport.button": "Generate My Learning DNA",
     "achievements.dnaReport.loading": "Analyzing...",
-    
+
     "achievements.badge.start.name": "The First Step",
     "achievements.badge.start.description": "Day 1 completed. The journey begins!",
-    "achievements.badge.milestone1.name": "Milestone 1: Foundation",
+    "achievements.badge.milestone1.name": "Milestone 1: Learning Profile",
     "achievements.badge.milestone1.description": "Week 1 mastered! Your foundation is set.",
     "achievements.badge.milestone2.name": "Milestone 2: Toolbox",
     "achievements.badge.milestone2.description": "Week 2 done! Your tools are sharpened.",
-    "achievements.badge.milestone3.name": "Milestone 3: Integration",
+    "achievements.badge.milestone3.name": "Milestone 3: Reflection Compass",
     "achievements.badge.milestone3.description": "Week 3 completed! Your system is running.",
     "achievements.badge.finish.name": "Learning Master",
     "achievements.badge.finish.description": "All 30 days completed. Congratulations!",
@@ -118,8 +119,7 @@ export const en = {
     "onboarding.steps.2.title": "AI-Powered Learning Coach",
     "onboarding.steps.2.description": "Use the Learning Booster and the interactive coach to overcome blocks and deepen your understanding.",
 
-    // --- COURSE DATA: MASTER LEARNING (OPTIMIZED) ---
-    // This is the translated and optimized content based on the final German version.
+    // --- COURSE DATA: MASTER LEARNING ---
     "course.1.title": "The Learning Compass",
     "course.1.subtitle": "Your path to learning mastery begins NOW!",
     "course.1.introduction": "Imagine what your work feels like when you see change not as a threat, but as an opportunity. That's learning agility—the superpower in our dynamic world of work. Today, we develop your personal learning compass to guide you, leverage your strengths, and master challenges.",
@@ -138,9 +138,9 @@ export const en = {
     "course.2.sections.0.title": "Core Concepts: Growth vs. Fixed Mindset & Neuroplasticity",
     "course.2.sections.0.content.0": "<strong>Fixed Mindset:</strong> The belief that abilities are innate and unchangeable. Leads to avoiding challenges.",
     "course.2.sections.0.content.1": "<strong>Growth Mindset:</strong> The conviction that abilities can be developed through dedication, effort, and learning. Leads to seeking challenges.",
-    "course.2.sections.0.content.2": "<strong>Brain Fact:</strong> Neuroplasticity is real! Every time you learn or practice something new, you physically form new connections between your neurons. Effort and focus literally reshape your brain!",
+    "course.2.sections.0.content.2": "<strong>Neuroplasticity:</strong> Your brain is not a static organ. Every time you learn, practice, or experience something new, new connections form between neurons. Effort and focus literally reshape your brain!",
     "course.2.sections.0.content.3": "<strong>The Magic of 'Not Yet':</strong> Replace 'I can't do it' with 'I can't do it yet.' It transforms a judgment into a process.",
-    "course.2.exercise.title": "Cognitive Workout: Mindset Detective",
+    "course.2.exercise.title": "Exercise: Mindset Detective",
     "course.2.exercise.description": "Recall a specific work situation where you faced a challenge. Were your thoughts more Fixed ('That's just how I am') or Growth ('What can I learn from this?')? Now, formulate 3 concrete Growth Mindset statements for that exact situation.",
     "course.2.takeaways.0": "Apply one of your new Growth statements in a real situation tomorrow. Observe (without judgment) the reaction—your own and that of others.",
 
@@ -151,8 +151,8 @@ export const en = {
     "course.3.sections.0.content.0": "<strong>What is curiosity really?</strong> It's an active mindset: seeking the new, exploring the unknown, and the ability to tolerate uncertainty while digging deeper.",
     "course.3.sections.0.content.1": "<strong>The Socratic Effect:</strong> Developing knowledge through questions. The famous 'Why?' is often the key to getting from symptoms to causes.",
     "course.3.sections.0.content.2": "<strong>The Five Levels of Questioning:</strong> A model to systematically explore topics: 1. FACTS (What?), 2. CAUSES (Why?), 3. OPTIONS (How?), 4. PURPOSE (What for?), 5. VISION (What if?).",
-    "course.3.sections.0.content.3": "<strong>Brain Fact:</strong> Curiosity activates the brain's reward system (similar to good food) and releases dopamine, which enhances memory and learning motivation. Curious brains are ready-to-learn brains.",
-    "course.3.exercise.title": "Cognitive Workout: The 5-Why Deep Dive",
+    "course.3.sections.0.content.3": "<strong>Beginner's Mind (Shoshin):</strong> Approach situations as if you were seeing them for the first time—open, without preconceived notions. It requires courage to temporarily 'switch off' one's own expertise.",
+    "course.3.exercise.title": "Exercise: The 5-Why Deep Dive",
     "course.3.exercise.description": "Choose a current, concrete work problem. Ask the first 'Why?' question. Note the answer (A1). Ask the next 'Why?' question about answer A1. Repeat this at least 5 times. The goal is to move from superficial symptoms to the root cause. What was the most surprising assumption you uncovered?",
     "course.3.takeaways.0": "In a conversation tomorrow, consciously ask an open question ('Why...', 'How...', 'What for...'). Listen actively. How does it change the dynamic?",
 
@@ -176,7 +176,7 @@ export const en = {
     "course.5.sections.0.content.1": "<strong>Yerkes-Dodson Curve:</strong> Describes the U-shaped relationship between arousal (stress, uncertainty) and performance. The 'sweet spot' is in the middle—the learning zone.",
     "course.5.sections.0.content.2": "<strong>Productive Discomfort:</strong> The feeling of 'Phew, this is demanding!', slight nervousness, curiosity. This is a signal for growth.",
     "course.5.sections.0.content.3": "<strong>Micro-Experiments (Tim Ferriss):</strong> Instead of giant leaps, break down the path out of the comfort zone into tiny, manageable low-risk experiments.",
-    "course.5.exercise.title": "Cognitive Workout: Design Your First Micro-Experiment",
+    "course.5.exercise.title": "Exercise: Design Your First Micro-Experiment",
     "course.5.exercise.description": "Choose a small learning goal from your learning zone. What is the absolute smallest, concrete step you can take to get closer to this goal? Formulate a clear learning hypothesis ('I want to find out if...'). Plan when you will do it.",
     "course.5.takeaways.0": "What small challenge will you take on tomorrow?",
 
@@ -186,7 +186,7 @@ export const en = {
     "course.6.sections.0.title": "Core Concepts: Kolb's Learning Cycle & Deep Reflection",
     "course.6.sections.0.content.0": "<strong>Kolb's Learning Cycle:</strong> A model showing how learning works: 1. Concrete Experience. 2. Observation & Reflection. 3. Abstract Conceptualization. 4. Active Experimentation.",
     "course.6.sections.0.content.1": "<strong>Deep Reflection (Socrates):</strong> Digs for the 'why' behind the 'why'. It asks: 'Why did I react that way?', 'What assumptions led to this result?'.",
-    "course.6.sections.0.content.2": "<strong>Brain Fact:</strong> When we reflect on experiences, the brain strengthens the neural connections formed during the experience. Reflection turns fleeting memories into stable knowledge.",
+    "course.6.sections.0.content.2": "<strong>The Learning Journal:</strong> Your external memory and reflection partner. It makes reflection a concrete act and creates a valuable knowledge base.",
     "course.6.sections.0.content.3": "<strong>Metacognition (Piaget):</strong> Thinking about thinking. The ability to understand, monitor, and control one's own learning processes.",
     "course.6.exercise.title": "Exercise: Run an Experience Through Kolb's Learning Cycle",
     "course.6.exercise.description": "Choose a concrete work experience from the last 1-2 days. Briefly describe it and then answer the questions for the 4 stages: What happened? What did I think/feel? What is the key learning from this? What will I test/do differently next time?",
@@ -210,9 +210,9 @@ export const en = {
     "course.8.sections.0.title": "Core Concepts: Deep vs. Shallow Work & Focus Training",
     "course.8.sections.0.content.0": "<strong>Deep Work:</strong> Cognitively demanding activities performed in a state of distraction-free concentration. This is where real learning and mastery happen.",
     "course.8.sections.0.content.1": "<strong>Shallow Work:</strong> Non-demanding, logistical tasks that can often be done while distracted.",
-    "course.8.sections.0.content.2": "<strong>Brain Fact:</strong> Multitasking is a myth. Every interruption forces the brain to switch context. This consumes valuable mental energy ('attention residue').",
+    "course.8.sections.0.content.2": "<strong>The Cost of Switching:</strong> Our brain is bad at multitasking. Every interruption forces the brain to switch context. This costs time and mental energy.",
     "course.8.sections.0.content.3": "<strong>The Pomodoro Technique:</strong> A simple yet effective method to train focus: 25 minutes of concentrated work, 5 minutes of break.",
-    "course.8.exercise.title": "Cognitive Workout: Your First Pomodoro Session",
+    "course.8.exercise.title": "Exercise: Your First Pomodoro Session",
     "course.8.exercise.description": "Choose ONE clear, manageable task. Turn off ALL notifications. Set a timer for 25 minutes. Work only on this task. When the timer rings: STOP! Take a 5-minute break—without digital devices. How did it feel?",
     "course.8.takeaways.0": "What one distraction will you turn off first?",
 
@@ -221,10 +221,10 @@ export const en = {
     "course.9.introduction": "How do we ensure that knowledge doesn't just float around in our head, but really sticks? The key is Active Recall. Passive review is like watching sports—Active Recall is the actual training!",
     "course.9.sections.0.title": "Core Concepts: Active Recall vs. The Illusion of Knowing",
     "course.9.sections.0.content.0": "<strong>What is Active Recall?</strong> Actively retrieving information from your memory *without* looking at your notes. The opposite is passive review (re-reading).",
-    "course.9.sections.0.content.1": "<strong>Brain Fact:</strong> The act of struggling to retrieve information strengthens the neural pathway to it. It's like paving a path in your brain. This 'Testing Effect' is one of the most robust findings in learning science.",
+    "course.9.sections.0.content.1": "<strong>Why is it so effective?</strong> Every time you struggle to retrieve information, you strengthen the neural connections to it. This is the scientifically proven 'Testing Effect'.",
     "course.9.sections.0.content.2": "<strong>The 'Illusion of Knowing':</strong> When we see material again, we recognize it. This gives us the *feeling* of knowing it. But recognition is not the same as free recall!",
     "course.9.sections.0.content.3": "<strong>Techniques:</strong> Self-testing, flashcards, concept mapping from memory, self-explanation (Feynman Technique).",
-    "course.9.exercise.title": "Cognitive Workout: Active Recall in Practice",
+    "course.9.exercise.title": "Exercise: Active Recall in Practice",
     "course.9.exercise.description": "Choose a short, new, work-relevant text (max. 1-2 pages). Study it for 10 minutes. Then, put all materials away. For 7 minutes, try to reproduce the key points from memory only. Then compare your result with the original. Where are the gaps?",
     "course.9.takeaways.0": "Tomorrow, when you need to look up information you should know: pause and first try to actively recall it from memory before you look it up.",
     
@@ -245,10 +245,10 @@ export const en = {
     "course.11.introduction": "The real world rarely presents problems neatly sorted by type. We must flexibly switch between concepts and strategies. This is where Interleaving comes in.",
     "course.11.sections.0.title": "Core Concepts: Interleaving vs. Blocked Practice",
     "course.11.sections.0.content.0": "<strong>What is Interleaving?</strong> Systematically switching between different, but related, topics or problem types within a single learning session. The opposite is Blocked Practice (completing all of Topic A, then all of Topic B).",
-    "course.11.sections.0.content.1": "<strong>Brain Fact:</strong> Interleaving forces your brain to constantly load and unload different mental models. This builds cognitive flexibility, the ability to switch between different ways of thinking, which is crucial for complex problem-solving.",
+    "course.11.sections.0.content.1": "<strong>Why does it work?</strong> The constant switching forces your brain to recognize subtle differences and similarities. It learns to distinguish: 'When do I use strategy A, and when strategy B?'.",
     "course.11.sections.0.content.2": "<strong>Constructive Confusion:</strong> Interleaving often feels more strenuous and slower. You make more mistakes. This mental effort is precisely what creates deep neural connections. It's a 'desirable difficulty'.",
     "course.11.sections.0.content.3": "<strong>The Right Balance:</strong> Interleaving works best when the individual concepts are at least fundamentally understood. Combine focus phases (Deep Work) with interleaving phases.",
-    "course.11.exercise.title": "Cognitive Workout: Blocked vs. Interleaved",
+    "course.11.exercise.title": "Exercise: Blocked vs. Interleaved – Your Personal Comparison",
     "course.11.exercise.description": "Choose 2-3 related topics/skills from your job. Sketch a plan how you would traditionally practice them (blocked). Then, design a second plan where you switch between them more frequently (interleaved). Which plan feels intuitively 'easier', and which one promises more long-term success according to today's lesson?",
     "course.11.takeaways.0": "Observe yourself tomorrow: When do you switch between very different tasks? Take a conscious 30 seconds after such a switch to mentally 'reset'.",
 
@@ -272,7 +272,7 @@ export const en = {
     "course.13.sections.0.content.1": "<strong>The 4 Steps:</strong> 1. Choose & study a concept. 2. Explain it to a layperson (use simple language, avoid jargon). 3. Identify knowledge gaps (where do you get stuck?). 4. Go back to the material, fill the gaps & simplify.",
     "course.13.sections.0.content.2": "<strong>Scientific Background:</strong> The 'protégé effect' or 'learning by teaching' shows that explaining to others significantly improves one's own understanding.",
     "course.13.sections.0.content.3": "<strong>Metacognition:</strong> The Feynman technique is also a tool of metacognition. It helps you uncover not only knowledge gaps but also flawed thinking.",
-    "course.13.exercise.title": "Cognitive Workout: Feynman Check for Your 'Expert Knowledge'",
+    "course.13.exercise.title": "Exercise: Feynman Check for Your 'Expert Knowledge'",
     "course.13.exercise.description": "Choose a topic from your field where you feel confident. Take a blank sheet of paper. Now, explain this concept in writing as if for someone completely new to the field. Read your explanation critically. Where is it still too complex or unclear? Mark all weak spots.",
     "course.13.takeaways.0": "When you explain something tomorrow: consciously try to replace at least one piece of jargon with a simpler formulation or a short analogy.",
 
@@ -305,10 +305,10 @@ export const en = {
     "course.16.introduction": "How do we know if our experiments were successful? The answer lies in feedback. Imagine you could see any feedback—even critical—not as an attack, but as a valuable clue to help you get better, faster.",
     "course.16.sections.0.title": "Core Concepts: The Psychology & Art of Feedback",
     "course.16.sections.0.content.0": "<strong>Why it's (existentially) important:</strong> We all have blind spots. External feedback provides crucial information to learn, adapt, and correct mistakes.",
-    "course.16.sections.0.content.1": "<strong>Brain Fact:</strong> Our brain processes social rejection or harsh criticism in the same regions as physical pain. That's why negative feedback can literally 'hurt' and trigger defensive reactions (fight, flight, freeze).",
+    "course.16.sections.0.content.1": "<strong>Between Shield & Learning Mode:</strong> Our brain is programmed to detect social threats (criticism). People with a Growth Mindset are more likely to see feedback as information about the task, not a judgment of the person.",
     "course.16.sections.0.content.2": "<strong>Be Proactive:</strong> Don't wait for feedback. Seek it out actively and specifically! This shows a willingness to learn and gives you more control.",
     "course.16.sections.0.content.3": "<strong>Decoding Feedback:</strong> Separate the valuable signal from the distracting noise. Signal = concrete, observable examples. Noise = generalizations, personal attacks.",
-    "course.16.exercise.title": "Cognitive Workout: Proactively Seeking Feedback",
+    "course.16.exercise.title": "Exercise: Proactively Seeking Feedback",
     "course.16.exercise.description": "Choose ONE specific skill for which you want to receive feedback. Choose a suitable person and formulate 1-2 very specific, open-ended questions that target observable behavior (e.g., 'Which single aspect of my argument in meeting X did you find least convincing and why?'). Ask for the feedback.",
     "course.16.takeaways.0": "When you give feedback tomorrow (even positive!): consciously try to name at least one concrete example of the behavior you are addressing.",
     
@@ -331,8 +331,8 @@ export const en = {
     "course.18.sections.0.content.0": "<strong>The Re-Framing:</strong> A mistake is not an endpoint or proof of inability. It's an unexpected result, a signal, a valuable data point.",
     "course.18.sections.0.content.1": "<strong>Productive vs. Avoidable Mistakes:</strong> Productive (intelligent) mistakes arise from trying new things at the edge of our knowledge and offer maximum learning opportunities. Avoidable mistakes result from inattention.",
     "course.18.sections.0.content.2": "<strong>After Action Review (AAR):</strong> A structured analysis with 4 key questions: 1. GOAL? 2. RESULT? 3. CAUSES? 4. ACTION/LESSONS LEARNED?",
-    "course.18.sections.0.content.3": "<strong>Resilience (Grit):</strong> The key is the combination of failure analysis (Day 18), metacognitive tools (Day 17), and a Growth Mindset (Day 2) to build true resilience.",
-    "course.18.exercise.title": "Cognitive Workout: Mini-AAR for an Everyday Mistake",
+    "course.18.sections.0.content.3": "<strong>Building Resilience (Angela Duckworth):</strong> The ability to deal with setbacks, not be discouraged by them, but to grow from them.",
+    "course.18.exercise.title": "Exercise: Mini-AAR for an Everyday Mistake",
     "course.18.exercise.description": "Think of a small situation from the last few days that didn't go according to plan. Briefly answer the 4 AAR questions: What was the goal? What actually happened? Why was there a deviation? What is the ONE most important lesson learned from this?",
     "course.18.takeaways.0": "Recall a small mistake from today. Consciously formulate a sentence that frames it as a learning experience: 'Okay, [mistake X] happened. This is a good opportunity to learn how I can do [learning Y] better next time.'",
     
@@ -343,8 +343,8 @@ export const en = {
     "course.19.sections.0.content.0": "<strong>Knowledge Synthesis:</strong> The creative act of combining and linking different ideas, facts, or perspectives to create a new, deeper understanding or an original solution.",
     "course.19.sections.0.content.1": "<strong>Lateral Thinking (Edward de Bono):</strong> Deliberately deviating from established, logical thought paths to gain new perspectives, e.g., through provocations or random inputs.",
     "course.19.sections.0.content.2": "<strong>Analogy Mapping:</strong> Transferring the structure or principles of a known domain (e.g., cooking) to a problem in another domain (e.g., software development).",
-    "course.19.sections.0.content.3": "<strong>Brain Fact:</strong> Creative breakthroughs often happen when the brain switches from focused thinking (prefrontal cortex) to a relaxed, diffuse mode. This allows distant neural networks to connect in new ways.",
-    "course.19.exercise.title": "Cognitive Workout: Lateral Thinking with a Random Impulse",
+    "course.19.sections.0.content.3": "<strong>AI as a Synthesis Partner:</strong> AI can analyze vast amounts of data, recognize patterns, and suggest connections we might never have come up with ourselves.",
+    "course.19.exercise.title": "Exercise: Lateral Thinking with a Random Impulse",
     "course.19.exercise.description": "Define a current work problem. Find a random noun online. Then, freely brainstorm what associations or metaphors come to mind between your problem and the random word. Allow 'absurd' ideas. Are there 1-2 surprising new lines of thought?",
     "course.19.takeaways.0": "When you read an article tomorrow, consciously ask yourself at the end: 'What connection does this have to my current work or another area of interest?'. Make a brief note.",
     
@@ -391,7 +391,7 @@ export const en = {
     "course.23.sections.0.content.0": "<strong>The Environment as the 'Third Teacher' (Montessori):</strong> Our environment shapes our behavior, mood, and ability to learn more than we are often aware.",
     "course.23.sections.0.content.1": "<strong>Environmental Psychology:</strong> Factors like light, order, noise, and nature elements have a demonstrable impact on our concentration and well-being.",
     "course.23.sections.0.content.2": "<strong>Taming the Digital Environment:</strong> Notification overload and the pull of social media are often the main culprits for distraction. Radically turn off notifications and use focus apps.",
-    "course.23.sections.0.content.3": "<strong>This final week is about synthesis:</strong> and creating a personal **'Learning Operating System'**. This ensures users leave with a clear, sustainable plan for the future.",
+    "course.23.sections.0.content.3": "<strong>Cultivating Digital Ecology:</strong> Consciously choose a small but fine selection of core tools and get to know them really well, instead of constantly chasing new apps.",
     "course.23.exercise.title": "Exercise: Physical Learning Oasis – Check & Instant Optimization",
     "course.23.exercise.description": "Go to your main learning/work space. What is the ONE small, quickly implementable change that would have the greatest positive impact on your concentration? Do it NOW! Tidy up the desk, close the door, turn off notifications.",
     "course.23.takeaways.0": "Introduce the '2-Minute Rule' tomorrow: Before you leave your workspace (lunch break, end of day), take 2 minutes to quickly tidy up.",
@@ -404,7 +404,7 @@ export const en = {
     "course.24.sections.0.content.1": "<strong>Intrinsic Motivation:</strong> You learn or act because the activity itself brings you joy or is personally meaningful. This is the more sustainable driver than external incentives (extrinsic motivation).",
     "course.24.sections.0.content.2": "<strong>If-Then Plans:</strong> Concrete plans in the format 'If situation X occurs, then I will do behavior Y.' They remove the need for a decision in the critical moment and reduce the need for willpower.",
     "course.24.sections.0.content.3": "<strong>Identity-Based Habits (James Clear):</strong> Don't just ask, 'What do I want to do?' but 'Who do I want to be?'. Every action that aligns with your desired identity ('I am a lifelong learner') is a vote for that identity.",
-    "course.24.exercise.title": "Cognitive Workout: Forging If-Then Plans",
+    "course.24.exercise.title": "Exercise: Forging If-Then Plans for Your Biggest Hurdles",
     "course.24.exercise.description": "What is ONE typical situation that regularly prevents you from learning? Develop a specific 'If-Then' plan for it. Make the 'Then' behavior as small and simple as possible (e.g., 'If I'm too exhausted after work, then I will only read ONE page').",
     "course.24.takeaways.0": "Consistently apply your most important If-Then plan tomorrow when the trigger situation occurs! Feel the difference.",
     
@@ -415,7 +415,7 @@ export const en = {
     "course.25.sections.0.content.0": "<strong>Why it's essential today:</strong> The half-life of knowledge is decreasing dramatically. Those who cling to old recipes for success risk becoming irrelevant. Unlearning is a core component of learning agility.",
     "course.25.sections.0.content.1": "<strong>The Hurdles of Unlearning:</strong> We cling to what is familiar. The brain loves routines, we have emotional anchors to methods that have made us successful, and questioning knowledge can threaten our identity as an expert.",
     "course.25.sections.0.content.2": "<strong>Detective Work:</strong> Regularly ask yourself Socratic questions about your routines: 'Is this method still the most effective way?', 'On what assumptions is this based?', 'What newer insights could make this approach obsolete?'.",
-    "course.25.sections.0.content.3": "<strong>The final week was redesigned:</strong> to focus less on new concepts and more on **synthesis** and the creation of a personal **'Learning Operating System'**.",
+    "course.25.sections.0.content.3": "<strong>Training Cognitive Flexibility:</strong> Every conscious act of letting go of an old pattern and adopting a new one trains your cognitive flexibility.",
     "course.25.exercise.title": "Exercise: Identify Your 'Unlearning' Candidate",
     "course.25.exercise.description": "Go through your workday. Which tools, processes, or ways of thinking do you use out of habit? What feels 'old' or no longer works optimally? List 3-5 candidates for potential 'unlearning'. Choose the most promising one and critically question it.",
     "course.25.takeaways.0": "When you perform a routine tomorrow: ask yourself briefly, 'Am I doing this out of habit or because it's still the best way?'.",

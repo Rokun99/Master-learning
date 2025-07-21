@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useTranslation } from '../hooks/useTranslation';
 import { generateIdeas } from '../lib/gemini';
@@ -37,8 +38,8 @@ export const IdeaGeneratorModal: React.FC<IdeaGeneratorModalProps> = ({ onClose 
         setIdeas([]);
 
         try {
-            const systemInstruction = t('ideaGenerator.modal.systemPrompt', { prompt });
-            const generatedIdeas = await generateIdeas(systemInstruction);
+            const systemInstruction = t('ideaGenerator.modal.systemPrompt');
+            const generatedIdeas = await generateIdeas(prompt, systemInstruction);
             setIdeas(generatedIdeas);
 
         } catch (e: any) {
@@ -51,14 +52,12 @@ export const IdeaGeneratorModal: React.FC<IdeaGeneratorModalProps> = ({ onClose 
 
 
     return (
-        <div className="idea-generator-modal-overlay">
-            <div className="idea-generator-modal-content">
-                <header className="idea-generator-header">
-                    <h2>{t('ideaGenerator.modal.title')}</h2>
-                    <button className="modal-close-button" onClick={onClose} aria-label={t('ideaGenerator.modal.close')}>×</button>
-                </header>
+        <div className="modal-overlay" onClick={onClose}>
+            <div className="modal-content" onClick={e => e.stopPropagation()}>
+                <button className="modal-close-button" onClick={onClose} aria-label={t('ideaGenerator.modal.close')}>×</button>
+                <h2>{t('ideaGenerator.modal.title')}</h2>
                 <p>{t('ideaGenerator.modal.description')}</p>
-                <form className="idea-generator-form" onSubmit={handleGenerate}>
+                <form onSubmit={handleGenerate}>
                     <input
                         type="text"
                         value={prompt}

@@ -43,9 +43,9 @@
 }
 
 [data-theme="dark"] {
-    --bg-color: #0f172a; /* Slate 900 */
-    --sidebar-bg: #1e293b; /* Slate 800 */
-    --content-bg: #1e293b; /* Slate 800 */
+    --bg-color: #020617; /* Slate 950 */
+    --sidebar-bg: #0f172a; /* Slate 900 */
+    --content-bg: #0f172a; /* Slate 900 */
     --primary-color: #60a5fa; /* Blue 400 */
     --secondary-color: #3b82f6; /* Blue 500 */
     --accent-color: #fb923c; /* Orange 400 */
@@ -53,9 +53,9 @@
     --light-text-color: #94a3b8; /* Slate 400 */
     --border-color: #334155; /* Slate 700 */
     --header-text-color: #f1f5f9;
-    --input-bg-color: #334155;
-    --ai-message-bg: #3730a3; /* Indigo 800 */
-    --user-message-bg: #1e40af; /* Blue 800 */
+    --input-bg-color: #1e293b; /* Slate 800 */
+    --ai-message-bg: #312e81; /* Indigo 800 */
+    --user-message-bg: #1e3a8a; /* Blue 800 */
     --feedback-card-bg: #431407; /* Orange 950 */
     --skeleton-bg: #334155;
     --example-bg-color: #0c4a6e; /* Sky 900 */
@@ -259,7 +259,7 @@ button:disabled {
     color: white;
 }
 .day-button.active {
-    background-color: var(--bg-color);
+    background-color: var(--bg-color); /* Subtle background for active state */
 }
 .day-button.active::before {
     content: '';
@@ -429,6 +429,7 @@ button:disabled {
     border-radius: var(--radius-md);
     border: 1px solid var(--border-color);
     background-color: var(--input-bg-color);
+    color: var(--text-color);
     font-size: 1rem;
 }
 .chat-input-form button {
@@ -485,7 +486,7 @@ button:disabled {
     width: 100%;
 }
 .onboarding-step {
-    flex: 0 0 100%;
+    flex: 0 0 100%; /* Prevents shrinking/growing */
     width: 100%;
     text-align: center;
 }
@@ -590,8 +591,30 @@ button:disabled {
 .idea-card {
     background-color: var(--bg-color);
     padding: 1rem;
+    border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
     margin-bottom: 1rem;
 }
-.idea-card h4 { color: var(--accent-color); }
-.idea-card-list { max-height: 40vh; overflow-y: auto; margin-top: 1rem; }
+.idea-card h4 { color: var(--accent-color); margin-top: 0; }
+.idea-card-list { max-height: 40vh; overflow-y: auto; margin-top: 1.5rem; padding-right: 0.5rem;}
+.modal-content input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.modal-content form button {
+    width: 100%;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.75rem;
+}
+.modal-content form button:hover:not(:disabled) {
+    background-color: #ea580c;
+}
+```
+

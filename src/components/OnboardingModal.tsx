@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useTranslation } from '../hooks/useTranslation';
 import { Icon } from './Header';
@@ -70,7 +69,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ onComplete }) 
                         {currentStep > 0 && (
                              <button className="secondary" onClick={handlePrev}>{t('onboarding.prev')}</button>
                         )}
-                        <button onClick={handleNext}>
+                        <button className="button-primary" onClick={handleNext}>
                             {currentStep === ONBOARDING_STEPS.length - 1 ? t('onboarding.finish') : t('onboarding.next')}
                         </button>
                     </div>

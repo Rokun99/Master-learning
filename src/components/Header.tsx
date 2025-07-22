@@ -137,6 +137,9 @@ export const Icon: React.FC<IconProps> = ({ name }) => {
     'chevrons-right': (
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 17 5-5-5-5"/><path d="m13 17 5-5-5-5"/></svg>
     ),
+    type: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+    ),
   };
 
   return icons[name] || null;
@@ -153,6 +156,8 @@ interface HeaderProps {
   currentStreak: number;
   isScrolled: boolean;
   isSubscribed: boolean;
+  isDyslexiaMode: boolean;
+  onToggleDyslexiaMode: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -163,7 +168,9 @@ export const Header: React.FC<HeaderProps> = ({
   onOpenAchievementsModal,
   currentStreak,
   isScrolled,
-  isSubscribed
+  isSubscribed,
+  isDyslexiaMode,
+  onToggleDyslexiaMode
 }) => {
   const { t, setLang, lang } = useTranslation();
 
@@ -191,6 +198,9 @@ export const Header: React.FC<HeaderProps> = ({
         </button>
         <button onClick={onOpenReminderModal} className="control-button" title={t('controls.reminders.label')} aria-label={t('controls.reminders.label')}>
           <Icon name={isSubscribed ? 'bell-check' : 'bell'} />
+        </button>
+        <button onClick={onToggleDyslexiaMode} className={`control-button ${isDyslexiaMode ? 'active' : ''}`} title={t('controls.toggleFont.label')} aria-label={t('controls.toggleFont.label')}>
+            <Icon name="type" />
         </button>
         <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} className="control-button" title={t('controls.toggleTheme.label')} aria-label={t('controls.toggleTheme.label')}>
           <Icon name={theme === 'light' ? 'moon' : 'sun'} />

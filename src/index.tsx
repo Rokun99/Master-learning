@@ -49,6 +49,7 @@ const AppContent = () => {
 
     const [isHeaderScrolled, setIsHeaderScrolled] = useState(false);
     const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(getInitialSidebarState());
+    const [isDyslexiaMode, setIsDyslexiaMode] = useState(false);
 
     const { setLang, t } = useTranslation();
 
@@ -58,14 +59,15 @@ const AppContent = () => {
         async function loadData() {
             try {
                 const db = await getDB();
-                const [storedLang, storedTheme, storedDay, storedEntries, storedBadges, onboardingCompleted, storedSubscription] = await Promise.all([
+                const [storedLang, storedTheme, storedDay, storedEntries, storedBadges, onboardingCompleted, storedSubscription, storedDyslexiaMode] = await Promise.all([
                     db.get('settings', 'language'),
                     db.get('settings', 'theme'),
                     db.get('settings', 'selectedDay'),
                     db.getAll('journal'),
                     db.getAll('achievements'),
                     db.get('settings', 'onboardingCompleted'),
-                    db.get('reminders', 'subscription')
+                    db.get('reminders', 'subscription'),
+                    db.get('settings', 'dyslexiaMode')
                 ]);
 
                 const entries: Record<number, JournalEntry> = {};
@@ -79,6 +81,12 @@ const AppContent = () => {
                 const initialTheme = storedTheme || (window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
                 setThemeState(initialTheme);
                 document.body.setAttribute('data-theme', initialTheme);
+                
+                const dyslexiaMode = !!storedDyslexiaMode;
+                setIsDyslexiaMode(dyslexiaMode);
+                if (dyslexiaMode) {
+                    document.body.classList.add('dyslexia-mode');
+                }
 
                 setSelectedDayState(storedDay || 1);
                 setUnlockedBadges(new Set(storedBadges.map(b => b.id)));
@@ -163,7 +171,14 @@ const AppContent = () => {
         document.body.setAttribute('data-theme', newTheme);
         await (await getDB()).put('settings', newTheme, 'theme');
     };
-    
+
+    const handleToggleDyslexiaMode = async () => {
+        const newMode = !isDyslexiaMode;
+        setIsDyslexiaMode(newMode);
+        document.body.classList.toggle('dyslexia-mode', newMode);
+        await (await getDB()).put('settings', newMode, 'dyslexiaMode');
+    };
+
     const setJournalEntry = async (dayId: number, content: ChatMessage[]) => {
         const existingEntry = journalEntries[dayId] || { dayId, content: [] };
         const updatedEntry = { ...existingEntry, content };
@@ -343,6 +358,8 @@ const AppContent = () => {
                 currentStreak={currentStreak}
                 isScrolled={isHeaderScrolled}
                 isSubscribed={!!reminderSubscription?.subscribed}
+                isDyslexiaMode={isDyslexiaMode}
+                onToggleDyslexiaMode={handleToggleDyslexiaMode}
             />
             <div className="app-container">
                 <Sidebar

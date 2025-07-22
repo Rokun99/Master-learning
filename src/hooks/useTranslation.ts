@@ -20,10 +20,6 @@ const TranslationContext = createContext<TranslationContextType>({
 
 export const useTranslation = () => useContext(TranslationContext);
 
-const getNestedValue = (obj: any, key: string): string | undefined => {
-    return key.split('.').reduce((acc, part) => acc && acc[part], obj);
-};
-
 export const TranslationProvider: FC<{ children: ReactNode }> = ({ children }) => {
     const [lang, setLangState] = useState<Language>('de');
 
@@ -36,7 +32,8 @@ export const TranslationProvider: FC<{ children: ReactNode }> = ({ children }) =
     };
 
     const t = (key: string, replacements?: Record<string, string | number>) => {
-        let translation = getNestedValue(locales[lang], key) || getNestedValue(locales['de'], key) || key;
+        // Direct lookup on the flat object, which is correct for our locale file structure.
+        let translation = (locales[lang] as Record<string, string>)[key] || (locales['de'] as Record<string, string>)[key] || key;
         
         if (replacements) {
             Object.keys(replacements).forEach(rKey => {
